@@ -1,0 +1,31 @@
+﻿@model List<Muhasebe.Models.Satis>
+@{
+    ViewData["Title"] = "Index";
+}
+<link href="~/css/style.css" rel="stylesheet" />
+<div class="text-center">
+    <h1 class="display-4">Satış Listesi</h1>
+</div>
+
+<div class="containerr2">
+
+    @foreach (var m in Model)
+    {
+        <div class="kutu">
+            <div class="solTaraf2">
+                Ürün Kategori:<br>
+                Ürün:<br>
+                Alan Kişi:<br>
+                Tutar:<br>
+                Adres:<br>
+            </div>
+            <div class="sagTaraf2">
+                @m.urun<br />
+                @m.urunAd<br />
+                @m.satilanKisi<br />
+                @m.tutar TL<br />
+                @m.adres<br />
+            </div>
+        </div>
+    }
+</div>

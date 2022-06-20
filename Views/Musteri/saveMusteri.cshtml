@@ -1,0 +1,44 @@
+﻿@model Muhasebe.Models.Musteri
+@{
+    ViewData["Title"] = "saveMusteri";
+}
+<h1>Müşteri Ekle</h1>
+<style>
+    .icerik {
+        height: 350px;
+        width: 40%;
+        border: 2px solid gray;
+        border-radius: 25px;
+    }
+
+    .solTaraf {
+        float: left;
+        margin: 30px;
+    }
+
+    .sagTaraf {
+        float: left;
+        margin: 30px;
+    }
+</style>
+<div class="icerik">
+    <form method="post">
+        <div class="sagTaraf">
+            @Html.LabelFor(x => x.ad):<br /><br />
+            @Html.LabelFor(x => x.soyAd):<br /><br />
+            @Html.LabelFor(x => x.aldigiUrun):<br /><br />
+            @Html.LabelFor(x => x.adres):<br /><br />
+        </div>
+        <div class="sagTaraf">
+            @Html.TextBoxFor(x => x.ad)
+            <br /><br />
+            @Html.TextBoxFor(x => x.soyAd)
+            <br /><br />
+            @Html.TextBoxFor(x => x.aldigiUrun)
+            <br /><br />
+            @Html.TextBoxFor(x => x.adres)
+            <br /><br />
+            <button>Müşteri Ekle</button>
+        </div>
+    </form>
+</div>

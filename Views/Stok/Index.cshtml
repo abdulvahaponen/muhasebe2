@@ -1,0 +1,31 @@
+﻿@model List<Muhasebe.Models.Stok>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Stok Listesi</h1>
+
+<link href="~/css/style.css" rel="stylesheet" />
+
+<div class="containerr">
+
+    @foreach (var m in Model)
+    {
+        <div class="kutu">
+            <div class="solTaraf">
+                Ürün Ad:<br>
+                Ürün Adet:<br>
+                Marka:<br>
+                Üretim Yeri:<br>
+                Açıklama:<br>
+            </div>
+            <div class="sagTaraf">
+                @m.urunAd<br />
+                @m.urunAdet<br />
+                @m.urunMarka<br />
+                @m.uretimYeri TL<br />
+                @m.urunAciklama<br />
+            </div>
+        </div>
+    }
+</div>

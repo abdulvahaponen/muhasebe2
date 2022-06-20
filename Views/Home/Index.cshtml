@@ -1,0 +1,31 @@
+﻿@model List<Muhasebe.Models.Fatura>
+@{
+    ViewData["Title"] = "Home Page";
+}
+<link href="~/css/style.css" rel="stylesheet" />
+<div class="text-center">
+    <h1 class="display-4">Fatura Listesi</h1>
+</div>
+
+<div class="containerr">
+
+    @foreach (var m in Model)
+    {
+        <div class="kutu">
+            <div class="solTaraf">
+                Ad:<br>
+                Şirket:<br>
+                FaturaNo:<br>
+                Tutar:<br>
+                Adres:<br>
+            </div>
+            <div class="sagTaraf">
+                @m.ad<br />
+                @m.sirket<br />
+                @m.faturaNo<br />
+                @m.tutar TL<br />
+                @m.adres<br />
+            </div>
+        </div>
+    }
+</div>

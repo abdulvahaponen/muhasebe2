@@ -1,0 +1,29 @@
+﻿@model List<Muhasebe.Models.Musteri>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Müşteri Listesi</h1>
+
+<link href="~/css/style.css" rel="stylesheet" />
+
+<div class="containerr">
+
+    @foreach (var m in Model)
+    {
+        <div class="kutu">
+            <div class="solTaraf">
+                Ad:<br>
+                Soyad:<br>
+                Aldığı ürün:<br>
+                Adres:<br>
+            </div>
+            <div class="sagTaraf">
+                @m.ad<br />
+                @m.soyAd<br />
+                @m.aldigiUrun<br />
+                @m.adres<br />
+            </div>
+        </div>
+    }
+</div>

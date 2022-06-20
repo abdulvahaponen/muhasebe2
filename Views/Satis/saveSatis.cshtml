@@ -1,0 +1,48 @@
+﻿@model Muhasebe.Models.Satis
+@{
+    ViewData["Title"] = "saveSatis";
+}
+
+<h1>Satis Ekle</h1>
+<style>
+    .icerik {
+        height: 350px;
+        width: 40%;
+        border: 2px solid gray;
+        border-radius: 25px;
+    }
+
+    .solTaraf {
+        float: left;
+        margin: 30px;
+    }
+
+    .sagTaraf {
+        float: left;
+        margin: 30px;
+    }
+</style>
+<div class="icerik">
+    <form method="post">
+        <div class="sagTaraf">
+            @Html.LabelFor(x => x.urun):<br /><br />
+            @Html.LabelFor(x => x.urunAd):<br /><br />
+            @Html.LabelFor(x => x.satilanKisi):<br /><br />
+            @Html.LabelFor(x => x.adres):<br /><br />
+            @Html.LabelFor(x => x.tutar):<br /><br />
+        </div>
+        <div class="sagTaraf">
+            @Html.TextBoxFor(x => x.urun)
+            <br /><br />
+            @Html.TextBoxFor(x => x.urunAd)
+            <br /><br />
+            @Html.TextBoxFor(x => x.satilanKisi)
+            <br /><br />
+            @Html.TextBoxFor(x => x.adres)
+            <br /><br />
+            @Html.TextBoxFor(x => x.tutar)
+            <br /><br />
+            <button>Satis Ekle</button>
+        </div>
+    </form>
+</div>
